@@ -18,7 +18,7 @@ spec:
       - name: cont1
         image: goutham1404/zomato_project:latest
         ports:
-          - containerPort: 80
+          - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -29,4 +29,5 @@ spec:
   selector:
     app: zomato
   ports:
-    - port: 3000
+    - port: 80
+      targetPort: 3000
